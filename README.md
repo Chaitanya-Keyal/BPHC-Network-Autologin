@@ -1,4 +1,4 @@
-# BPHC-Sophos-Autologin
+# BPHC-Network-Autologin
 
 Automatically login to the BPHC network instead of manually logging in every time you connect to the network.
 
@@ -11,7 +11,7 @@ Automatically login to the BPHC network instead of manually logging in every tim
 1. Clone the repository
 
 ```
-git clone https://github.com/Chaitanya-Keyal/BPHC-Sophos-Autologin.git
+git clone https://github.com/Chaitanya-Keyal/BPHC-Network-Autologin.git
 ```
 
 2. Install the required packages:
