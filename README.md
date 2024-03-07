@@ -29,7 +29,7 @@ pip install -r requirements.txt
    - Windows:
      - Run the script using Task Scheduler to login everytime you connect to the network:
        1. Run `create_task.bat` as administrator.
-       2. Input the path of the script(`script.pyw`) and the xml file(`task.xml`) when prompted.
+       2. Input the path of the xml file (`task.xml`) and the path of the script (`script.pyw`) when prompted.
      - Create a shortcut to the script and place it in the `startup` folder (`shell:startup`) to automatically login on startup
    - Linux:
      - Create a shortcut to the script and place it in the `startup` folder (`~/.config/autostart`) to automatically login on startup
