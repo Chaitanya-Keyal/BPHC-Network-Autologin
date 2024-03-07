@@ -3,8 +3,8 @@ import requests
 link = "http://172.16.0.30:8090/httpclient.html"
 
 # Enter your username and password here
-username = "username"
-password = "password"
+username = "fxxxxyyyy"
+password = "Bits@zzzzzzzz"
 
 while True:
     r = requests.post(
