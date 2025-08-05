@@ -2,34 +2,44 @@
 
 Automatically login to the BPHC network instead of manually logging in every time you connect to the network.
 
-## Requirements:
-
-- Python 3.9 or higher
-
-## Usage:
+## Usage
 
 1. Clone the repository
 
-```
-git clone https://github.com/Chaitanya-Keyal/BPHC-Network-Autologin.git
-```
+    ```bash
+    git clone https://github.com/Chaitanya-Keyal/BPHC-Network-Autologin.git
+    ```
 
-2. Install the required packages:
+2. Follow platform specific instructions:
 
-```
-pip install -r requirements.txt
-```
+### Windows
 
-3. Open `script.pyw` in a text editor and replace `username` and `password` with your BPHC Network username and password
-4. Options to run the script:
-   - To login just once:
-     ```
-     python script.pyw
-     ```
-   - Windows:
-     - Run the script using Task Scheduler to login everytime you connect to the network:
-       1. Run `create_task.bat` as administrator.
-       2. Input the path of the xml file (`task.xml`) and the path of the script (`script.pyw`) when prompted.
-     - Create a shortcut to the script and place it in the `startup` folder (`shell:startup`) to automatically login on startup
-   - Linux:
-     - Create a shortcut to the script and place it in the `startup` folder (`~/.config/autostart`) to automatically login on startup
+1. Run `create_task.bat` as administrator
+2. Input the path of the xml file (`task.xml`) and your credentials when prompted.
+
+> The script will run automatically every time you log in to your device, and on every network change.
+
+### MacOS/ Linux
+
+1. Open [login.bash](login.bash) in a text editor and replace `USERNAME` and `PASSWORD` with your BPHC Network username and password
+
+2. Make the script executable:
+
+    ```bash
+    chmod +x login.bash
+    ```
+
+3. Add a cron job:
+
+    ```bash
+    crontab -e
+    ```
+
+    - Add the following lines:
+
+        ```bash
+        @reboot /path/to/your/login.bash
+        0 */6 * * * /path/to/your/login.bash
+        ```
+
+> The script will run automatically every time your device boots up, and every 6 hours thereafter.
