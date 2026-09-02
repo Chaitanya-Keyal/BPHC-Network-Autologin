@@ -14,14 +14,17 @@ Automatically login to the BPHC network instead of manually logging in every tim
 
 ### Windows
 
-1. Run `create_task.bat` as administrator
-2. Input the path of the xml file (`task.xml`) and your credentials when prompted.
+1. Open [login.bat](login.bat) in a text editor and set your credentials in the `CRED_1` line (format: `username|password`). To try multiple accounts in order, add `CRED_2`, `CRED_3`, ... and update `CRED_COUNT`.
 
-> The script will run automatically every time you log in to your device, and on every network change.
+2. Run `create_task.bat` as administrator
+
+3. Input the path of the xml file (`task.xml`) when prompted.
+
+> The script will run automatically every time you log in to your device, and on every network change. Credentials are tried in order — if one fails, the next is used.
 
 ### MacOS/ Linux
 
-1. Open [login.bash](login.bash) in a text editor and replace `USERNAME` and `PASSWORD` with your BPHC Network username and password
+1. Open [login.bash](login.bash) in a text editor and replace the credentials in the `CREDENTIALS` array with your own credentials. The format is `username|password`. You can add multiple credentials, and the script will try them in order.
 
 2. Make the script executable:
 
